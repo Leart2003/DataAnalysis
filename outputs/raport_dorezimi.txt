@@ -1,0 +1,24 @@
+PROJEKTI I ANALIZES SE TE DHENAVE
+
+1. Mbledhja e te dhenave
+Te dhenat u lexuan nga skedari Cybersecurity_attacks.csv.
+
+2. Pastrimi i te dhenave
+Rreshta para pastrimit: 178031
+Rreshta pas pastrimit: 178025
+Duplikate te larguara: 6
+Attack subcategory te mbushura: 4476
+Attack reference te mbushura: 51745
+Kolona marker te mbushura: 0
+
+3. Queries dhe filters
+Kategorite me te shpeshta: ['Exploits', 'Fuzzers', 'Dos']
+Protokollet me te shpeshta: ['tcp', 'udp', 'unas']
+Filtrim shembull per Exploits + tcp: 15 rezultate
+
+4. Web scraping
+Artikuj/advisories te marra nga web: 9
+Web scraping u realizua me sukses.
+
+5. Paraqitja grafike
+Jane gjeneruar 3 lloje grafike: bar chart, pie chart dhe line chart.

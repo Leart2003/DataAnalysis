@@ -1,0 +1,211 @@
+{
+  "top_categories": [
+    {
+      "attack_category": "Exploits",
+      "total": 69582
+    },
+    {
+      "attack_category": "Fuzzers",
+      "total": 34361
+    },
+    {
+      "attack_category": "Dos",
+      "total": 25117
+    },
+    {
+      "attack_category": "Reconnaissance",
+      "total": 20571
+    },
+    {
+      "attack_category": "Generic",
+      "total": 20296
+    },
+    {
+      "attack_category": "Backdoor",
+      "total": 4192
+    },
+    {
+      "attack_category": "Analysis",
+      "total": 1933
+    },
+    {
+      "attack_category": "Shellcode",
+      "total": 1541
+    }
+  ],
+  "top_protocols": [
+    {
+      "protocol": "tcp",
+      "total": 57778
+    },
+    {
+      "protocol": "udp",
+      "total": 27679
+    },
+    {
+      "protocol": "unas",
+      "total": 25251
+    },
+    {
+      "protocol": "ospf",
+      "total": 9733
+    },
+    {
+      "protocol": "sctp",
+      "total": 4442
+    },
+    {
+      "protocol": "any",
+      "total": 1174
+    }
+  ],
+  "top_destination_ports": [
+    {
+      "destination_port": "0",
+      "total": 92418
+    },
+    {
+      "destination_port": "80",
+      "total": 19629
+    },
+    {
+      "destination_port": "53",
+      "total": 14118
+    },
+    {
+      "destination_port": "111",
+      "total": 9802
+    },
+    {
+      "destination_port": "179",
+      "total": 5566
+    },
+    {
+      "destination_port": "25",
+      "total": 5384
+    },
+    {
+      "destination_port": "445",
+      "total": 5065
+    },
+    {
+      "destination_port": "520",
+      "total": 3396
+    },
+    {
+      "destination_port": "21",
+      "total": 3117
+    },
+    {
+      "destination_port": "514",
+      "total": 1875
+    }
+  ],
+  "sample_filter_exploits_tcp": [
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Windows Metafile (WMF) SetAbortProc() Code Execution [009] (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/wmf_009.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Miscellaneous Batch",
+      "protocol": "tcp",
+      "destination_port": "5555",
+      "attack_name": "HP Data Protector Backup (https://strikecenter.bpointsys.com/bps/strikes/exploits/misc/cve_2011_1729.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Cisco Ios",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Cisco IOS HTTP Authentication Bypass Level 64 (https://strikecenter.bpointsys.com/bps/strikes/exploits/ios/cisco_auth_bypass_level_64.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Microsoft Internet Explorer Frameset Memory Corruption (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms06_042_html_frameset_memory_corruption.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Microsoft Internet Explorer Frameset Memory Corruption (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms06_042_html_frameset_memory_corruption.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Scada",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Mitsubishi EZPcAut260.dll ActiveX Control ESOpen Buffer Overflow (https://strikecenter.bpointsys.com/bps/strikes/exploits/scada/cve_2014_1641_Mitsubishi_EZPcAut260_ActiveX_Control_ESOpen_bo.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Microsoft Internet Explorer Layouts Handling Memory Corruption (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms11_018_layouts_handling_memory_corruption.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Microsoft Internet Explorer ActiveX Arbitrary Command Execution (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms03_040_malicious_popups.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Browser",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Microsoft Internet Explorer ActiveX Arbitrary Command Execution (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms03_040_malicious_popups.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Miscellaneous Batch",
+      "protocol": "tcp",
+      "destination_port": "6661",
+      "attack_name": "BigAnt Server Arbitrary File Upload (https://strikecenter.bpointsys.com/bps/strikes/exploits/misc/cve_2012_6274.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Scada",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Advantech WebAccess SCADA webvact NodeName2 Buffer overflow (https://strikecenter.bpointsys.com/bps/strikes/exploits/scada/cve_2014_0766_advantech_webaccess_scada_webvact_nodename2_bo.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Miscellaneous Batch",
+      "protocol": "tcp",
+      "destination_port": "8080",
+      "attack_name": "HP SiteScope Default User information (https://strikecenter.bpointsys.com/bps/strikes/exploits/misc/osvdb_74865_hp_sitescope_default_credential.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Web Application",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "Headline Portal Engine page.dmoz.show.php3 HPEinc Parameter PHP File Include Variant 2 (https://strikecenter.bpointsys.com/bps/strikes/exploits/webapp/include/hpi_include_18.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Miscellaneous Batch",
+      "protocol": "tcp",
+      "destination_port": "80",
+      "attack_name": "HP OpenView Network Node Manager memory Corruption (https://strikecenter.bpointsys.com/bps/strikes/exploits/misc/cve_2010_1550.xml)"
+    },
+    {
+      "attack_category": "Exploits",
+      "attack_subcategory": "Clientside",
+      "protocol": "tcp",
+      "destination_port": "143",
+      "attack_name": "Microsoft Office Text Converter Integer Underflow Code Execution (IMAP4 Corrupt Quoted Printable) (https://strikecenter.bpointsys.com/bps/strikes/exploits/clientside/ms09_010_int_underflow_corrupt_imap4_download_quoted_printable.xml)"
+    }
+  ]
+}

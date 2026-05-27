@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Analysis Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #edf2f7, #fffaf0);
+      color: #1a202c;
+    }
+    header {
+      padding: 32px 24px 16px;
+      text-align: center;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 24px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.86);
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 14px 32px rgba(26, 32, 44, 0.12);
+    }
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cybersecurity Attacks Analysis</h1>
+    <p>Grafiket e gjeneruara nga projekti i analizes se te dhenave.</p>
+  </header>
+  <main>
+    <section class="card"><img src="bar_chart_attack_categories.svg" alt="bar_chart_attack_categories"></section><section class="card"><img src="pie_chart_protocols.svg" alt="pie_chart_protocols"></section><section class="card"><img src="line_chart_destination_ports.svg" alt="line_chart_destination_ports"></section>
+  </main>
+</body>
+</html>
