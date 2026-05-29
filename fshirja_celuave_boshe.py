@@ -6,6 +6,7 @@ from data_cleaning import AttackDataCleaner
 from data_collection import CSVDataCollector
 
 
+# Ky script tregon vetem pjesen e vlerave bosh para dhe pas pastrimit.
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
     collector = CSVDataCollector()

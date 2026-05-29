@@ -17,7 +17,7 @@ Protokollet me te shpeshta: ['tcp', 'udp', 'unas']
 Filtrim shembull per Exploits + tcp: 15 rezultate
 
 4. Web scraping
-Artikuj/advisories te marra nga web: 9
+Rreshta sulmesh te marra nga web: 9
 Web scraping u realizua me sukses.
 
 5. Paraqitja grafike

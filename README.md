@@ -19,7 +19,7 @@ Ky projekt ploteson kerkesat e dorezimit per:
 - `data_cleaning.py` - pastrimi, normalizimi, mbushja e vlerave qe mungojne, largimi i duplikateve
 - `query_engine.py` - krijimi i databazes SQLite dhe ekzekutimi i queries
 - `visualization.py` - gjenerimi i grafikave SVG dhe dashboard-it HTML
-- `web_scraper.py` - web scraping nga faqja e CISA
+- `web_scraper.py` - web scraping i rreshtave te sulmeve nga faqja pershkruese e UNSW-NB15
 - `reporting.py` - krijimi i raportit perfundimtar
 - `models.py` - klasat e objekteve
 
@@ -36,9 +36,11 @@ Pas ekzekutimit krijohet dosja `outputs/` me:
 - `cleaned_cybersecurity_attacks.csv`
 - `cybersecurity_attacks.db`
 - `query_results.json`
-- `scraped_cisa_advisories.json`
+- `scraped_unsw_ground_truth.json`
+- `scraped_unsw_ground_truth.csv`
 - `bar_chart_attack_categories.svg`
 - `pie_chart_protocols.svg`
 - `line_chart_destination_ports.svg`
 - `dashboard.html`
 - `raport_dorezimi.txt`
+- `combined_cybersecurity_attacks.csv`

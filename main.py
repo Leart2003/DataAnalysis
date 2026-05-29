@@ -7,9 +7,10 @@ from data_collection import CSVDataCollector
 from query_engine import SQLiteQueryEngine
 from reporting import SubmissionReportWriter
 from visualization import SVGChartBuilder
-from web_scraper import CybersecurityWebScraper
+from web_scraper import UNSWGroundTruthWebScraper
 
 
+# Kjo metode ekzekuton te gjithe projektin nga fillimi deri ne fund.
 def main() -> None:
     base_dir = Path(__file__).resolve().parent
     outputs_dir = base_dir / "outputs"
@@ -18,7 +19,7 @@ def main() -> None:
     cleaner = AttackDataCleaner()
     query_engine = SQLiteQueryEngine(outputs_dir / "cybersecurity_attacks.db")
     chart_builder = SVGChartBuilder(outputs_dir)
-    scraper = CybersecurityWebScraper()
+    scraper = UNSWGroundTruthWebScraper()
     reporter = SubmissionReportWriter()
 
     raw_records = collector.read_csv(base_dir / "Cybersecurity_attacks.csv")
@@ -90,15 +91,19 @@ def main() -> None:
     )
     dashboard_path = chart_builder.build_dashboard([bar_chart, pie_chart, line_chart])
 
-    advisories = scraper.scrape_cisa_advisories(limit=10)
+    scraped_records = scraper.scrape_attack_records(limit=10)
     collector.write_json(
-        outputs_dir / "scraped_cisa_advisories.json",
+        outputs_dir / "scraped_unsw_ground_truth.json",
         {
-            "source": "https://www.cisa.gov/news-events/cybersecurity-advisories",
-            "items": collector.advisories_to_payload(advisories),
+            "source": "https://fkie-cad.github.io/COMIDDS/content/datasets/unsw_nb15/",
+            "items": [record.to_csv_row() for record in scraped_records],
             "error": scraper.last_error,
         },
     )
+    collector.write_csv(outputs_dir / "scraped_unsw_ground_truth.csv", scraped_records)
+
+    combined_records = clean_records + scraped_records
+    collector.write_csv(outputs_dir / "combined_cybersecurity_attacks.csv", combined_records)
 
     query_summary = {
         "top_categories": [row["attack_category"] for row in top_categories_rows[:3]],
@@ -109,7 +114,7 @@ def main() -> None:
         outputs_dir / "raport_dorezimi.txt",
         cleaner.stats,
         query_summary,
-        len(advisories),
+        len(scraped_records),
         scraper.last_error,
     )
 
@@ -122,10 +127,12 @@ def main() -> None:
     print(f"Grafiket u ruajten te: {outputs_dir}")
     print(f"Dashboard: {dashboard_path}")
     print(f"Raporti: {report_path}")
+    print(f"CSV e scrape-uara: {outputs_dir / 'scraped_unsw_ground_truth.csv'}")
+    print(f"CSV e kombinuar: {outputs_dir / 'combined_cybersecurity_attacks.csv'}")
     if scraper.last_error:
         print(f"Web scraping nuk u ekzekutua plotesisht: {scraper.last_error}")
     else:
-        print(f"Web scraping perfundoi me {len(advisories)} artikuj.")
+        print(f"Web scraping perfundoi me {len(scraped_records)} rreshta sulmesh.")
 
 
 if __name__ == "__main__":

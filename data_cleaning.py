@@ -6,6 +6,7 @@ from models import AttackRecord
 
 
 class AttackDataCleaner:
+    # Ruajme statistika te thjeshta per pastrimin.
     def __init__(self) -> None:
         self.stats: dict[str, int] = {
             "rows_before": 0,
@@ -16,14 +17,20 @@ class AttackDataCleaner:
             "marker_filled": 0,
         }
 
+    # Ben pastrimin kryesor: normalizim, mbushje te vlerave bosh dhe largim duplikatesh.
     def clean(self, records: list[AttackRecord]) -> list[AttackRecord]:
         self.stats["rows_before"] = len(records)
-        normalized = [self._normalize_record(record) for record in records]
-        filled = [self._fill_missing_values(record) for record in normalized]
-        deduped = self._remove_duplicates(filled)
-        self.stats["rows_after"] = len(deduped)
-        return deduped
+        cleaned_records: list[AttackRecord] = []
+        for record in records:
+            self._normalize_record(record)
+            self._fill_missing_values(record)
+            cleaned_records.append(record)
 
+        cleaned_records = self._remove_duplicates(cleaned_records)
+        self.stats["rows_after"] = len(cleaned_records)
+        return cleaned_records
+
+    # Numeron sa vlera bosh kemi ne secilen kolone.
     def summarize_missing_values(self, records: list[AttackRecord]) -> dict[str, int]:
         counts: Counter[str] = Counter()
         for record in records:
@@ -32,6 +39,7 @@ class AttackDataCleaner:
                     counts[key] += 1
         return dict(counts)
 
+    # Rregullon formatin e tekstit qe te dhenat te jene me uniforme.
     def _normalize_record(self, record: AttackRecord) -> AttackRecord:
         record.attack_category = record.attack_category.strip().title()
         record.attack_subcategory = record.attack_subcategory.strip().title()
@@ -46,6 +54,7 @@ class AttackDataCleaner:
         record.time_range = record.time_range.strip()
         return record
 
+    # Mbush fushat bosh me vlera te thjeshta dhe te kuptueshme.
     def _fill_missing_values(self, record: AttackRecord) -> AttackRecord:
         if not record.attack_subcategory:
             record.attack_subcategory = "Unknown"
@@ -58,6 +67,7 @@ class AttackDataCleaner:
             self.stats["marker_filled"] += 1
         return record
 
+    # Heq rekordet qe jane krejt te njejta me njeri-tjetrin.
     def _remove_duplicates(self, records: list[AttackRecord]) -> list[AttackRecord]:
         unique_records: list[AttackRecord] = []
         seen: set[tuple[str, ...]] = set()
@@ -69,4 +79,3 @@ class AttackDataCleaner:
             seen.add(key)
             unique_records.append(record)
         return unique_records
-

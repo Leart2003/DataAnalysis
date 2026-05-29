@@ -32,7 +32,7 @@ class SubmissionReportWriter:
             f"Filtrim shembull per Exploits + tcp: {query_summary['sample_filter_count']} rezultate",
             "",
             "4. Web scraping",
-            f"Artikuj/advisories te marra nga web: {scraped_count}",
+            f"Rreshta sulmesh te marra nga web: {scraped_count}",
         ]
         if scrape_error:
             lines.append(f"Shenim: web scraping nuk u ekzekutua plotesisht ne kete ambient: {scrape_error}")
@@ -50,4 +50,3 @@ class SubmissionReportWriter:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("\n".join(lines), encoding="utf-8")
         return path
-

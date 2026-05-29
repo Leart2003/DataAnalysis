@@ -18,6 +18,7 @@ class AttackRecord:
     marker: str
     time_range: str
 
+    # Kthen nje rresht CSV ne objekt AttackRecord.
     @classmethod
     def from_csv_row(cls, row: dict[str, str]) -> "AttackRecord":
         return cls(
@@ -34,6 +35,7 @@ class AttackRecord:
             time_range=row.get("Time", ""),
         )
 
+    # Kthen objektin perseri ne formatin e kolonave te CSV-se.
     def to_csv_row(self) -> dict[str, str]:
         return {
             "Attack category": self.attack_category,
@@ -49,10 +51,11 @@ class AttackRecord:
             "Time": self.time_range,
         }
 
+    # Krijon nje celes unik per te gjetur duplikatet.
     def dedupe_key(self) -> tuple[str, ...]:
-        row = self.to_csv_row()
-        return tuple(row.values())
+        return tuple(self.to_csv_row().values())
 
+    # Nxjerr vitin nga fusha Time nese formati eshte i sakte.
     def start_year(self) -> int | None:
         if not self.time_range:
             return None
@@ -63,10 +66,3 @@ class AttackRecord:
             return datetime.fromtimestamp(int(start_value), tz=timezone.utc).year
         except (OverflowError, ValueError):
             return None
-
-
-@dataclass(slots=True)
-class ScrapedAdvisory:
-    title: str
-    url: str
-

@@ -1,0 +1,123 @@
+{
+  "source": "https://fkie-cad.github.io/COMIDDS/content/datasets/unsw_nb15/",
+  "items": [
+    {
+      "Attack category": "Reconnaissance",
+      "Attack subcategory": "HTTP",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.0",
+      "Source Port": "13284",
+      "Destination IP": "149.171.126.16",
+      "Destination Port": "80",
+      "Attack Name": "Domino Web Server Database Access: /doladmin.nsf (https://strikecenter.bpointsys.com/bps/strikes/recon/http/domino/access_domino_doladmin_nsf.xml)",
+      "Attack Reference": "-",
+      ".": ".",
+      "Time": "1421927414-1421927416"
+    },
+    {
+      "Attack category": "Exploits",
+      "Attack subcategory": "Unix 'r' Service",
+      "Protocol": "udp",
+      "Source IP": "175.45.176.3",
+      "Source Port": "21223",
+      "Destination IP": "149.171.126.18",
+      "Destination Port": "32780",
+      "Attack Name": "Solaris rwalld Format String Vulnerability (https://strikecenter.bpointsys.com/bps/strikes/exploits/rservices/solaris_rwall_format_string.xml)",
+      "Attack Reference": "CVE 2002-0573 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2002%2d0573)BID 4639 (http://www.securityfocus.com/bid/4639)CVSS-High (https://strikecenter.bpointsys.com/bps/reference/CVSS/7.5%20%28AV%3aN%2fAC%3aL%2fAu%3aN%2fC%3aP%2fI%3aP%2fA%3aP%29)",
+      ".": ".",
+      "Time": "1421927415-1421927415"
+    },
+    {
+      "Attack category": "Exploits",
+      "Attack subcategory": "Browser",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.2",
+      "Source Port": "23357",
+      "Destination IP": "149.171.126.16",
+      "Destination Port": "80",
+      "Attack Name": "Windows Metafile (WMF) SetAbortProc() Code Execution [009] (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/wmf_009.xml)",
+      "Attack Reference": "CVE 2005-4560 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2005%2d4560)BID 16074 (http://www.securityfocus.com/bid/16074)OSVDB 21987 (http://www.osvdb.org/21987)CVSS-High (https://strikecenter.bpointsys.com/bps/reference/CVSS/7.5%20%28AV%3aN%2fAC%3aL%2fAu%3aN%2fC%3aP%2fI%3aP%2fA%3aP%29)",
+      ".": ".",
+      "Time": "1421927416-1421927416"
+    },
+    {
+      "Attack category": "Exploits",
+      "Attack subcategory": "Miscellaneous Batch",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.2",
+      "Source Port": "13792",
+      "Destination IP": "149.171.126.16",
+      "Destination Port": "5555",
+      "Attack Name": "HP Data Protector Backup (https://strikecenter.bpointsys.com/bps/strikes/exploits/misc/cve_2011_1729.xml)",
+      "Attack Reference": "CVE 2011-1729 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2011%2d1729)BID 47638 (http://www.securityfocus.com/bid/47638)OSVDB 72188 (http://www.osvdb.org/72188)CVSS-Critical (https://strikecenter.bpointsys.com/bps/reference/CVSS/10.0%20%28AV%3aN%2fAC%3aL%2fAu%3aN%2fC%3aC%2fI%3aC%2fA%3aC%29)",
+      ".": ".",
+      "Time": "1421927417-1421927417"
+    },
+    {
+      "Attack category": "Exploits",
+      "Attack subcategory": "Cisco IOS",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.2",
+      "Source Port": "26939",
+      "Destination IP": "149.171.126.10",
+      "Destination Port": "80",
+      "Attack Name": "Cisco IOS HTTP Authentication Bypass Level 64 (https://strikecenter.bpointsys.com/bps/strikes/exploits/ios/cisco_auth_bypass_level_64.xml)",
+      "Attack Reference": "CVE 2001-0537 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2001%2d0537)BID 2936 (http://www.securityfocus.com/bid/2936)OSVDB 578 (http://www.osvdb.org/578)CVSS-High (https://strikecenter.bpointsys.com/bps/reference/CVSS/9.3%20%28AV%3aN%2fAC%3aM%2fAu%3aN%2fC%3aC%2fI%3aC%2fA%3aC%29)",
+      ".": ".",
+      "Time": "1421927418-1421927418"
+    },
+    {
+      "Attack category": "DoS",
+      "Attack subcategory": "Miscellaneous",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.0",
+      "Source Port": "39500",
+      "Destination IP": "149.171.126.15",
+      "Destination Port": "80",
+      "Attack Name": "Cisco DCP2100 SADownStartingFrequency Denial of Service (https://strikecenter.bpointsys.com/bps/strikes/denial/misc/cisco_dcp2100_denial_of_service.xml)",
+      "Attack Reference": "http://www.exploit-db.com/exploits/21523/ (http%3a%2f%2fwww.exploit%2ddb.com%2fexploits%2f21523%2f)CVSS-High (https://strikecenter.bpointsys.com/bps/reference/CVSS/7.8%20%28AV%3aN%2fAC%3aL%2fAU%3aN%2fC%3aN%2fI%3aN%2fA%3aC%29)",
+      ".": ".",
+      "Time": "1421927419-1421927419"
+    },
+    {
+      "Attack category": "DoS",
+      "Attack subcategory": "Miscellaneous",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.0",
+      "Source Port": "23910",
+      "Destination IP": "149.171.126.15",
+      "Destination Port": "80",
+      "Attack Name": "Cisco DCP2100 SADownStartingFrequency Denial of Service (https://strikecenter.bpointsys.com/bps/strikes/denial/misc/cisco_dcp2100_denial_of_service.xml)",
+      "Attack Reference": "http://www.exploit-db.com/exploits/21523/ (http%3a%2f%2fwww.exploit%2ddb.com%2fexploits%2f21523%2f)CVSS-High (https://strikecenter.bpointsys.com/bps/reference/CVSS/7.8%20%28AV%3aN%2fAC%3aL%2fAU%3aN%2fC%3aN%2fI%3aN%2fA%3aC%29)",
+      ".": ".",
+      "Time": "1421927419-1421927422"
+    },
+    {
+      "Attack category": "Generic",
+      "Attack subcategory": "IXIA",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.0",
+      "Source Port": "29309",
+      "Destination IP": "149.171.126.14",
+      "Destination Port": "3000",
+      "Attack Name": "Alt-N_MDaemon_WorldClient_Service_Memory_Corruption_attack (https://strikecenter.bpointsys.com/bps/strikes/generic/ixia/alt-n_mdaemon_worldclient_service_memory_corruption_attack.xml)",
+      "Attack Reference": "CVE 2008-2631 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2008%2d2631)OSVDB 45923 (http://www.osvdb.org/45923)CVSS-Moderate (https://strikecenter.bpointsys.com/bps/reference/CVSS/5.0%20%28AV%3aN%2fAC%3aL%2fAu%3aN%2fC%3aN%2fI%3aN%2fA%3aP%29)",
+      ".": ".",
+      "Time": "1421927420-1421927420"
+    },
+    {
+      "Attack category": "Exploits",
+      "Attack subcategory": "Browser",
+      "Protocol": "tcp",
+      "Source IP": "175.45.176.0",
+      "Source Port": "61089",
+      "Destination IP": "149.171.126.18",
+      "Destination Port": "80",
+      "Attack Name": "Microsoft Internet Explorer Frameset Memory Corruption (https://strikecenter.bpointsys.com/bps/strikes/exploits/browser/ms06_042_html_frameset_memory_corruption.xml)",
+      "Attack Reference": "CVE 2006-3637 (http://cve.mitre.org/cgi-bin/cvename.cgi?name=2006%2d3637)BID 18227 (http://www.securityfocus.com/bid/18227)OSVDB 27853 (http://www.osvdb.org/27853)CVSS-Moderate (https://strikecenter.bpointsys.com/bps/reference/CVSS/5.1%20%28AV%3aN%2fAC%3aH%2fAu%3aN%2fC%3aP%2fI%3aP%2fA%3aP%29)",
+      ".": ".",
+      "Time": "1421927421-1421927421"
+    }
+  ],
+  "error": null
+}

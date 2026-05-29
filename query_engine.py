@@ -8,9 +8,11 @@ from models import AttackRecord
 
 
 class SQLiteQueryEngine:
+    # Ruajme rrugen e databazes SQLite.
     def __init__(self, db_path: str | Path) -> None:
         self.db_path = str(db_path)
 
+    # Krijon databazen dhe fut te gjitha rekordet e pastruara ne tabelen attacks.
     def build_database(self, records: list[AttackRecord]) -> None:
         Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
         with sqlite3.connect(self.db_path) as connection:
@@ -58,6 +60,7 @@ class SQLiteQueryEngine:
             )
             connection.commit()
 
+    # Ekzekuton nje query SQL dhe kthen rezultatin si liste dictionaries.
     def run_query(self, sql: str, params: tuple = ()) -> list[dict[str, object]]:
         with sqlite3.connect(self.db_path) as connection:
             connection.row_factory = sqlite3.Row
@@ -65,6 +68,7 @@ class SQLiteQueryEngine:
             cursor.execute(sql, params)
             return [dict(row) for row in cursor.fetchall()]
 
+    # Nderton nje filter sipas kushteve qe i japim dhe kthen rezultatet.
     def filter_attacks(
         self,
         category: str | None = None,
@@ -97,9 +101,9 @@ class SQLiteQueryEngine:
         params.append(limit)
         return self.run_query(sql, tuple(params))
 
+    # Ruan rezultatet e query-ve ne file JSON.
     def export_json(self, output_path: str | Path, payload: object) -> None:
         path = Path(output_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("w", encoding="utf-8") as file:
             json.dump(payload, file, ensure_ascii=False, indent=2)
-
